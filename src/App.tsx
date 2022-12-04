@@ -32,15 +32,22 @@ function App() {
           justifyContent: 'center',
           alignItems: 'center',
           flex: 1,
-          height: '100%',
-          fontSize: '10rem',
+          fontSize: '4rem',
+          fontWeight: 800,
         }}
       >
-        Hello World
+        <Box
+          sx={{
+            marginInline: '0.5rem',
+          }}
+        >
+          Hello World
+        </Box>
       </Box>
       <Box
         sx={{
           display: 'flex',
+          flexWrap: 'wrap',
           alignItems: 'center',
           justifyContent: 'space-around',
         }}
@@ -70,7 +77,15 @@ interface ColorChangerProps {
 const ColorChanger = (props: ColorChangerProps) => {
   const { label, color, onChange } = props;
   return (
-    <Box sx={{ display: 'flex', alignItems: 'flex-end', gap: '0.5rem' }}>
+    <Box
+      sx={{
+        display: 'flex',
+        alignItems: 'flex-end',
+        gap: '0.5rem',
+        marginInline: '0.5rem',
+        minWidth: '10rem',
+      }}
+    >
       <ColorInput
         label={label}
         value={color}
